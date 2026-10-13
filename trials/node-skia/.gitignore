@@ -1,0 +1,7 @@
+node_modules/
+*.wav
+*.log
+qc/
+fonts/
+music.wav
+package-lock.json
