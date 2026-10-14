@@ -43,7 +43,7 @@ skills.sh 是 Vercel 2026-01-20 上线的 agent skill 目录 + 安装量排行�
 | 130 | `faceless-explainer` | heygen-com/hyperframes | 450.4K | 代码渲染（无脸讲解，SoloMCN 就用的它） |
 
 **市场结论**
-1. **HyperFrames 家族一家独大**（前 30 名里占 8 席，合计约 600 万次安装）。它是 HeyGen 开源的 Apache-2.0 框架：视频写成 HTML，GSAP 控动画，`data-*` 标时序，最后渲染 MP4。**不用 API、本地渲染**，是目前"agent 做视频"最正统的路。
+1. **HyperFrames 家族一家独大**（前 30 名里占 7 席，合计约 610 万次安装）。它是 HeyGen 开源的 Apache-2.0 框架：视频写成 HTML，GSAP 控动画，`data-*` 标时序，最后渲染 MP4。**不用 API、本地渲染**，是目前"agent 做视频"最正统的路。
 2. 榜单**只有"热度"维度，没有"近 3 个月更新"过滤**——所以我用 GitHub API 的 `pushed` 字段做了第二层硬筛（本文所有项目均已核验）。
 3. 安装量 ≠ 可信。skills.sh 是开放上架，有报道指出其存在恶意/刷量 skill 的风险；安装前建议看仓库源码 + 安全审计标签（skills.sh 每个 skill 有 Socket / Snyk / Agent Trust Hub 三项审计）。
 
@@ -69,7 +69,7 @@ skills.sh 是 Vercel 2026-01-20 上线的 agent skill 目录 + 安装量排行�
 | [liuzhaowei1/Digital-OPUS-VIDEO-SKILL](https://github.com/liuzhaowei1/Digital-OPUS-VIDEO-SKILL) | 0（新） | 2026-10-08 | MIT | ❌ 无（生图/TTS 可选） | **方法论最扎实**：11 类视频类型 + 37 条手法 + 参考片拆帧流程；做"照着爆款做"必读 |
 | [Yusuke710/manim-skill](https://github.com/Yusuke710/manim-skill) | 171 | 2026-10-07 | — | ❌ 无 | 一份 SKILL.md 教 agent 写 Manim，轻量 |
 | [HarleyCoops/Math-To-Manim](https://github.com/HarleyCoops/Math-To-Manim) | 2,769 | 2026-10-13 | — | ⚠️ 需 LLM | 自然语言 → Manim 代码；想法参考，别当生产链路 |
-| [marcelor-earth/generative-manim](https://github.com/marcelor-earth/generative-manim) | 933 | 2026-09-17 | — | ⚠️ 需 LLM | 同上，"GPT for video generation" |
+| [marcelo-earth/generative-manim](https://github.com/marcelo-earth/generative-manim) | 933 | 2026-09-17 | — | ⚠️ 需 LLM | 同上，"GPT for video generation" |
 
 **带实测/榜单背书的第三方交叉验证**：[zhuyansen/awesome-claude-video-skills](https://github.com/zhuyansen/awesome-claude-video-skills)（606★，2026-10-13）把 **290 个"让 agent 做视频"的仓库按类型分级 + 端到端实测**，其中 `claude-code-video-toolkit` 4/4 检查通过、5.5 分钟出片；`hyperframes` 自成一派（23.5 分钟）。这是目前最省时间的"选型目录"。
 
