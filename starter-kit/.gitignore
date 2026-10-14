@@ -1,0 +1,4 @@
+out/_work/
+*.pyc
+__pycache__/
+fonts/_glyph_index.json

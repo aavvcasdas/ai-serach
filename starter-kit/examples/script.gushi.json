@@ -1,0 +1,49 @@
+{
+  "size": [1080, 1920],
+  "fps": 30,
+  "theme_note": "情感感悟 / 图文成片：毛笔楷花字 + 暖金关键词高亮",
+  "transition": { "type": "fade", "duration": 0.5 },
+  "bgm": { "mode": "auto", "mood": "warm", "volume": 0.22 },
+  "style": { "theme": "warm", "sub_margin_v": 430, "title_size": 108, "sub_size": 74 },
+  "shots": [
+    {
+      "image": "images/gushi_01.jpg",
+      "duration": 4.2,
+      "motion": "in",
+      "title": "成年人的崩溃",
+      "sub": "都是**静音模式**的",
+      "voice": null
+    },
+    {
+      "image": "images/gushi_02.jpg",
+      "duration": 4.2,
+      "motion": "pan_left",
+      "sub": "不是不想说，是**说了也没用**",
+      "voice": null
+    },
+    {
+      "image": "images/gushi_03.jpg",
+      "duration": 4.2,
+      "motion": "out",
+      "sub": "白天把情绪**折叠**好，晚上再摊开",
+      "voice": null
+    },
+    {
+      "image": "images/gushi_04.jpg",
+      "duration": 4.2,
+      "motion": "in",
+      "title": "后来我才明白",
+      "sub": "能说出口的**委屈**，都还不算委屈",
+      "voice": null
+    },
+    {
+      "image": "images/gushi_05.jpg",
+      "duration": 4.6,
+      "motion": "pan_right",
+      "title": "你不是变冷漠了",
+      "sub": "你只是**累了**",
+      "note": "文案原创 · 素材建议用本机模型生成",
+      "voice": null
+    }
+  ]
+}
