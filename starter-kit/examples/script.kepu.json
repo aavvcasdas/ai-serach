@@ -1,0 +1,41 @@
+{
+  "size": [1080, 1920],
+  "fps": 30,
+  "theme_note": "AI 科普 / 知识图文：黑体花字 + 青蓝关键词高亮，节奏更快",
+  "transition": { "type": "fade", "duration": 0.35 },
+  "bgm": { "mode": "auto", "mood": "tech", "volume": 0.16 },
+  "style": { "theme": "tech", "sub_margin_v": 470, "title_size": 96, "sub_size": 66 },
+  "shots": [
+    {
+      "image": "images/kepu_01.jpg",
+      "duration": 3.6,
+      "motion": "in",
+      "title": "AI 为什么总在胡说",
+      "sub": "因为它**不是在查资料**，是在接话",
+      "voice": null
+    },
+    {
+      "image": "images/kepu_02.jpg",
+      "duration": 3.6,
+      "motion": "pan_right",
+      "sub": "它做的事只有一个：**猜下一个词**",
+      "voice": null
+    },
+    {
+      "image": "images/kepu_03.jpg",
+      "duration": 3.6,
+      "motion": "out",
+      "sub": "猜得像**人话**，不代表猜得对",
+      "voice": null
+    },
+    {
+      "image": "images/kepu_04.jpg",
+      "duration": 4.0,
+      "motion": "in",
+      "title": "所以怎么用",
+      "sub": "要**出处**、要**核对**，别把猜测当结论",
+      "note": "科普内容请标注来源 · 本片由代码渲染",
+      "voice": null
+    }
+  ]
+}

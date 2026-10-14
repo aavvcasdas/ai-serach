@@ -1,0 +1,5 @@
+# make_video.py 的依赖（都不需要 API Key）
+imageio-ffmpeg>=0.5      # 自带静态 ffmpeg 7.x（含 libass / xfade / zoompan）
+pillow>=10.0             # 花字、字幕渲染（PIL → 透明 PNG）
+fonttools>=4.50          # woff2 → ttf 转换（tools/fetch_fonts.py）
+brotli>=1.1              # woff2 解压必需
