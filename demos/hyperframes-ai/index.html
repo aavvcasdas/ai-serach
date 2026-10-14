@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#0a0a0a}
+  #root{width:100%;height:100%;position:relative;font-family:Inter,ui-sans-serif,system-ui,sans-serif;overflow:hidden}
+  .scene{position:absolute;inset:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  /* Scene 1 */
+  #s1{background:radial-gradient(1200px 800px at 30% 20%, #1e293b 0%, #0a0a0a 60%)}
+  #s1-title{font-size:110px;font-weight:900;letter-spacing:-0.04em;color:#f8fafc;line-height:0.9;text-align:center}
+  #s1-sub{font-size:36px;color:#94a3b8;margin-top:24px;letter-spacing:0.02em}
+  #s1-badge{margin-top:32px;padding:10px 28px;border-radius:999px;background:#22c55e;color:#052e16;font-weight:700;font-size:22px;letter-spacing:0.05em}
+  /* Scene 2 */
+  #s2{background:linear-gradient(180deg,#0f172a 0%,#020617 100%)}
+  #s2-grid{position:absolute;inset:0;opacity:0.15;background-image:linear-gradient(#334155 1px, transparent 1px),linear-gradient(90deg,#334155 1px, transparent 1px);background-size:80px 80px}
+  #s2-center{display:flex;gap:60px;align-items:center;z-index:1}
+  .qkv{width:280px;height:280px;border-radius:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:84px;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+  #q{background:linear-gradient(135deg,#60a5fa,#3b82f6);color:white}
+  #k{background:linear-gradient(135deg,#f472b6,#ec4899);color:white}
+  #v{background:linear-gradient(135deg,#34d399,#10b981);color:white}
+  .qkv-label{font-size:22px;font-weight:600;margin-top:12px;letter-spacing:0.08em;opacity:0.9}
+  #s2-formula{margin-top:60px;font-size:48px;color:#e2e8f0;font-weight:600;letter-spacing:0.02em;z-index:1}
+  #s2-formula span{color:#22d3ee}
+  /* Scene 3 */
+  #s3{background:radial-gradient(1000px 600px at 70% 30%, #1e1b4b 0%, #020617 70%)}
+  #s3-title{font-size:88px;font-weight:900;color:#f8fafc;text-align:center;line-height:1.1}
+  #s3-points{display:flex;gap:32px;margin-top:56px}
+  .point{width:420px;padding:32px 28px;border-radius:24px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1)}
+  .point-num{width:48px;height:48px;border-radius:12px;background:#f8fafc;color:#020617;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px}
+  .point-title{margin-top:18px;font-size:26px;font-weight:700;color:#f1f5f9}
+  .point-desc{margin-top:10px;font-size:20px;color:#94a3b8;line-height:1.5}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1920" data-height="1080">
+
+  <!-- Scene 1: 0-4s -->
+  <div id="s1" class="scene clip" data-start="0" data-duration="4" data-track-index="0">
+    <div id="s1-title">AI科普<br/>Transformer<br/>注意力机制</div>
+    <div id="s1-sub">Attention Is All You Need · 纯代码渲染演示</div>
+    <div id="s1-badge">HYPERFRAMES · NO API · 100% CODE</div>
+  </div>
+
+  <!-- Scene 2: 4-8s -->
+  <div id="s2" class="scene clip" data-start="4" data-duration="4" data-track-index="1">
+    <div id="s2-grid"></div>
+    <div id="s2-center">
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <div id="q" class="qkv">Q</div><div class="qkv-label">QUERY 查询</div>
+      </div>
+      <div style="font-size:64px;color:#475569;font-weight:200">×</div>
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <div id="k" class="qkv">K</div><div class="qkv-label">KEY 键</div>
+      </div>
+      <div style="font-size:64px;color:#475569;font-weight:200">→</div>
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <div id="v" class="qkv">V</div><div class="qkv-label">VALUE 值</div>
+      </div>
+    </div>
+    <div id="s2-formula">Attention(<span>Q,K,V</span>) = softmax(QK<sup>T</sup>/√d<sub>k</sub>)V</div>
+  </div>
+
+  <!-- Scene 3: 8-12s -->
+  <div id="s3" class="scene clip" data-start="8" data-duration="4" data-track-index="2">
+    <div id="s3-title">代码即视频<br/>可复现·可版本控制·零成本</div>
+    <div id="s3-points">
+      <div class="point"><div class="point-num">1</div><div class="point-title">纯代码渲染</div><div class="point-desc">HTML+GSAP+FFmpeg，无需调用任何AI视频API，本地确定性渲染</div></div>
+      <div class="point"><div class="point-num">2</div><div class="point-title">Agent友好</div><div class="point-desc">LLM天生擅长写HTML，21个Skills自动路由，批量生成100条</div></div>
+      <div class="point"><div class="point-num">3</div><div class="point-title">科普利器</div><div class="point-desc">公式、图表、动画精确可控，适合AI原理可视化</div></div>
+    </div>
+  </div>
+
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+// Scene1
+tl.fromTo("#s1-title", {y:80, opacity:0, scale:0.9}, {y:0, opacity:1, scale:1, duration:0.9, ease:"power3.out"}, 0.2)
+  .fromTo("#s1-sub", {y:30, opacity:0}, {y:0, opacity:1, duration:0.6, ease:"power2.out"}, 0.8)
+  .fromTo("#s1-badge", {y:20, opacity:0}, {y:0, opacity:1, duration:0.5}, 1.2)
+  .to("#s1", {scale:1.05, duration:3.8, ease:"none"}, 0)
+
+// Scene2
+  .fromTo("#s2-grid", {opacity:0}, {opacity:0.15, duration:0.8}, 4)
+  .fromTo("#q", {x:-80, opacity:0, rotation:-8}, {x:0, opacity:1, rotation:0, duration:0.7, ease:"back.out(1.7)"}, 4.2)
+  .fromTo("#k", {y:80, opacity:0}, {y:0, opacity:1, duration:0.7, ease:"back.out(1.7)"}, 4.4)
+  .fromTo("#v", {x:80, opacity:0, rotation:8}, {x:0, opacity:1, rotation:0, duration:0.7, ease:"back.out(1.7)"}, 4.6)
+  .fromTo("#s2-formula", {y:40, opacity:0}, {y:0, opacity:1, duration:0.6, ease:"power2.out"}, 5.2)
+
+// Scene3
+  .fromTo("#s3-title", {y:60, opacity:0}, {y:0, opacity:1, duration:0.8, ease:"power3.out"}, 8.2)
+  .fromTo(".point", {y:80, opacity:0}, {y:0, opacity:1, duration:0.7, stagger:0.15, ease:"power3.out"}, 8.8)
+
+window.__timelines["main"]=tl;
+tl.seek(0);
+</script>
+</body>
+</html>

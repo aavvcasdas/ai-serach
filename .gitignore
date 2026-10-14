@@ -1,0 +1,6 @@
+node_modules
+assets/fonts/*.zip
+.venv
+__pycache__
+*.ttc
+*.woff2
